@@ -54,3 +54,4 @@ device_name = "센서 A"
 print(type(device_name)) # <class 'str'>
 is_normal = True
 print(type(is_normal)) # <class 'bool'>
+

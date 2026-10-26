@@ -52,3 +52,9 @@ print(not True)    #False  (True의 반대가 출력)
 name = input("이름: ")
 age = input("나이: ")
 print(name)
+
+height = float("173.5")
+print(height, type(height))
+
+
+print("나이: " + str(30))

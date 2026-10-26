@@ -31,4 +31,11 @@ data = [data.strip() for data in data.split(",")]
 
 print(f'[센서 {data[1]}] 상태 {data[2].lower()}, 측정값 {float(data[3]):.2f}')
 
+# <리더님 제출안!>
+# data = ' 5, sensor_2, WARNING, 0.78912 '
+# parts = data.strip().split(',')
+# sid = parts[1].strip()
+# atatus = parts[2].strip().lower()
+# value = float(parts[3].strip())
 
+# print(f"[센서 {sid}] 상태 {status}, 측정값 {value:.2f}")

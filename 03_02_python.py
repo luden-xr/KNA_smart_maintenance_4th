@@ -3,3 +3,8 @@
 
 word = 'PYTHON'
 print(word[0], word[2], word[5])
+
+# 음수 인덱스: 뒤에서부터!
+print(word[-1], word[-2])  #N, O
+
+print(word[6])  #ERROR!!
