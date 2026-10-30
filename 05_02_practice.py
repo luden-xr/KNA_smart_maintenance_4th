@@ -13,9 +13,8 @@
 # print('정답입니다!')    
 
 
-print("-----실습2-----")
-found = False
-print(found)
+# print("-----실습2-----")
+# found = False
 # data = [60,50,40,90,30,50,80]
 # for i in (data):
 #     if i > 80:
@@ -25,3 +24,5 @@ print(found)
 #     print("발견")
 # else:
 #     print('없음')
+
+

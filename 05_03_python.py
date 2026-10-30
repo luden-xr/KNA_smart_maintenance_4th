@@ -46,20 +46,20 @@
 
 
 
-print("-----실습6-----")
-data = [25,26,27,28,29,30,31,32,33,34,35]
-h = []
-j=0
-count_1 = 0
-count_2 =0
-k=0
-for i in data:
-    j += i
-    count_1 += 1
-    if i > 30:
-        count_2 += 1
-        h.append(i)
-        k += i
-print("전체 평균:", j / count_1, "/", "고온 개수:", count_2 ,"/","고온 평균:",(k/count_2))
+# print("-----실습6-----")
+# data = [25,26,27,28,29,30,31,32,33,34,35]
+# h = []
+# j=0
+# count_1 = 0
+# count_2 =0
+# k=0
+# for i in data:
+#     j += i
+#     count_1 += 1
+#     if i > 30:
+#         count_2 += 1
+#         h.append(i)
+#         k += i
+# print("전체 평균:", j / count_1, "/", "고온 개수:", count_2 ,"/","고온 평균:",(k/count_2))
 
-print(h)
+# print(h)
