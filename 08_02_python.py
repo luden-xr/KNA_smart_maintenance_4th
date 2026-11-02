@@ -10,6 +10,7 @@ import csv
 # -encoding = 'utf-8'   한글이 깨지지 않도록 하는 것!!!!!!!
 
 FILE = "practice/08_press_13_261029_3.csv"
+output_file = "practice/over_90_sensors.csv"
 
 # f = open(FILE, "r", encoding="utf-8")
 # text = f.read()
@@ -64,10 +65,28 @@ FILE = "practice/08_press_13_261029_3.csv"
 
 
 
-print("-----실습5-----")
-with open("practice/08_write.csv", "w", encoding = "utf-8", newline = "") as w:
-    write = csv.writer(w)
-    write.writerow(["이름", "순서"])
-    write.writerow(["펌프", "01"])
-with open("practice/08_write.csv", "r", encoding = "utf-8") as w:
-    print(w.read())
+# print("-----실습5-----")
+# with open("practice/08_write.csv", "w", encoding = "utf-8", newline = "") as w:
+#     write = csv.writer(w)
+#     write.writerow(["이름", "순서"])
+#     write.writerow(["펌프", "01"])
+# with open("practice/08_write.csv", "r", encoding = "utf-8") as w:
+#     print(w.read())
+
+
+print("-----실습6-----")
+h_row = []
+with open("practice/08_press_13_261029_3.csv", "r", encoding = "utf-8") as f:
+    reader = csv.reader(f)
+    header = next(reader)
+    for row in reader:
+        if float(row[4]) > 90:
+            h_row.append(row)
+
+with open("practice/over_90_sensors.csv", "w", encoding = "utf-8", newline = "") as w:
+    writer = csv.writer(w)
+    writer.writerow(header)
+    writer.writerows(h_row)
+
+with open("practice/over_90_sensors.csv", "r", encoding = "utf-8") as f:
+    print(f.read())
