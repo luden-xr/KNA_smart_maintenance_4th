@@ -1,0 +1,6 @@
+total_n = 19
+valid_n = 15
+rejected_n = 4
+mean = 1897.68
+max = 4366.23
+min = 0.0
