@@ -9,7 +9,7 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent
 DATA_PATH = BASE / "practice" / "09_ict_inspection_dirty.csv"
 REPORT_PATH = BASE / "09_report.txt"
-RUN_TO_STEP = 5  # 실습 1 완성 후 2, ... 6으로 변경
+RUN_TO_STEP = 6  # 실습 1 완성 후 2, ... 6으로 변경
 
 
 def read_csv_data(path):
@@ -43,8 +43,8 @@ def group_by_part(rows):
             parts[p]= []
         parts[p].append(row)
         parts.setdefault(p, []).append(row)
-        return parts, dropped
-        raise NotImplementedError("실습 2: 부품별 분류 함수를 완성하세요")
+    return parts, dropped
+    raise NotImplementedError("실습 2: 부품별 분류 함수를 완성하세요")
 
 
 def calc_stats(rows, column=2):
@@ -120,6 +120,16 @@ def verify_part_counts(valid_rows):
     """[실습 6] 유효 행을 부품별로 다시 묶고 합계가 전체와 같은지 확인."""
     # TODO: group_by_part(valid_rows)를 재사용하고
     # 각 부품에 calc_stats(part_rows, 2)를 적용해 건수를 합산하세요.
+    parts_re, _ = group_by_part(valid_rows)
+    check_sum = 0
+
+    for  part_rows in sorted(parts_re):
+        check_sum += calc_stats(parts_re[part_rows], 2)["count"]
+        same = (check_sum == len(valid_rows))
+        print(same)
+        return same
+
+
     raise NotImplementedError("실습 6: 부품별 검증 함수를 완성하세요")
 
 
